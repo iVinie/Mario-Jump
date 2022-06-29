@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*Cenário do jogo*/
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+/*Imagem do cano do jogo Mario*/
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+/*Gif do Mario correndo*/
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+/*Função de pular*/
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    width: 550px;
+    position: absolute;
+    animation: cloud-animation 20s infinite linear
+}
+
+/*Animação do cano andando pelo mapa do jogo*/
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+/*Animação do pulo de Mario*/
+@keyframes jump {
+
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes cloud-animation{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
